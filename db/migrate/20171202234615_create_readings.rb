@@ -10,5 +10,7 @@ class CreateReadings < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    remove_column :readings, :device_id
+    add_column :readings, :device_id, :string
   end
 end

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sensor_name: MyString
+  range_min: 
+  range_max: 
+  unit: MyString
+  value: 
+  device_id: 
+
+two:
+  sensor_name: MyString
+  range_min: 
+  range_max: 
+  unit: MyString
+  value: 
+  device_id: 

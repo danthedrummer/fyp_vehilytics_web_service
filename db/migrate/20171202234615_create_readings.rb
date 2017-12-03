@@ -6,7 +6,7 @@ class CreateReadings < ActiveRecord::Migration[5.1]
       t.numeric :range_max
       t.string :unit
       t.numeric :value
-      t.numeric :device_id
+      t.string :device_id
 
       t.timestamps
     end

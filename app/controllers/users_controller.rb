@@ -14,6 +14,8 @@ class UsersController < ApplicationController
         @user = User.find(params[:email])
         if @user.password === params[:password]
             json_response(@user)
+        else
+            render(:status => 403)
         end
     end
     

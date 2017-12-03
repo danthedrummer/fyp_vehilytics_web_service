@@ -21,15 +21,15 @@ ActiveRecord::Schema.define(version: 20171202234615) do
     t.decimal "range_max"
     t.string "unit"
     t.decimal "value"
-    t.decimal "device_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "device_id"
   end
 
   create_table "users", primary_key: "email", id: :string, force: :cascade do |t|
     t.string "name"
     t.string "password"
-    t.integer "device_id"
+    t.string "device_id"
     t.string "vehicle_manufacturer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :email, null: false
       t.string :password
-      t.integer :device_id
+      t.string :device_id
       t.string :vehicle_manufacturer
 
       t.timestamps

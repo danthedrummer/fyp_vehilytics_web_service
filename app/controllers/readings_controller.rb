@@ -1,5 +1,6 @@
 class ReadingsController < ApplicationController
     before_action :set_reading_by_id, only: [:show, :update, :destroy]
+    before_action :set_readings_by_device_id, only: [:show]
     
     #GET readings for a device
     def index
@@ -28,12 +29,8 @@ class ReadingsController < ApplicationController
         @reading = Reading.find(params[:id])
     end
     
-    def set_readings_by_name
-        @readings = Reading.find(params[:sensor_name])
-    end
-    
     def set_readings_by_device_id
-        @readings = Reading.find(params[:device_id])
+        @readings = Reading.where(params[:device_id])
     end
     
     def reading_params
